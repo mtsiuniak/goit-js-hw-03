@@ -1,16 +1,13 @@
 'use strict';
 
 function makeArray(firstArray, secondArray, maxLength) {
-    const result = []
-    const firstArg = firstArray.join(" ")
-    const secondArg = secondArray.join(" ")
-    const allElements = firstArg + " " + secondArg
-    const splittedArray = allElements.split(" ")
-    for (let i = 0; i < maxLength; i++) {
-       result.push(splittedArray[i])
-    }
+    const newArray = []
+    const combinedArray = firstArray.concat(secondArray)
 
-    return result
+    for (let i = 0; i < maxLength; i++) {
+        newArray.push(combinedArray[i])
+    }
+    return newArray
 }
 
 
